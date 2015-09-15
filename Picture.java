@@ -12,9 +12,15 @@
 public class Picture
 {
     private Square wall;
+    private Square ball;
+    private Square sall;
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle bun;
+    private Circle nun;
+    private Circle dun;
+    private Person foot;
 
     /**
      * Constructor for objects of class Picture
@@ -30,30 +36,62 @@ public class Picture
     public void draw()
     {
         wall = new Square();
-        wall.moveHorizontal(-140);
+        wall.changeColor("black");
+        wall.moveHorizontal(-100);
         wall.moveVertical(20);
-        wall.changeSize(120);
+        wall.changeSize(80);
         wall.makeVisible();
         
-        window = new Square();
-        window.changeColor("black");
-        window.moveHorizontal(-120);
-        window.moveVertical(40);
-        window.changeSize(40);
-        window.makeVisible();
-
+        ball = new Square();
+        ball.changeColor("black");
+        ball.moveHorizontal(-100);
+        ball.moveVertical(-20);
+        ball.changeSize(80);
+        ball.makeVisible();
+        
         roof = new Triangle();  
         roof.changeSize(60, 180);
-        roof.moveHorizontal(20);
+        roof.moveHorizontal(290);
         roof.moveVertical(-60);
         roof.makeVisible();
 
+        //top body circle
         sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
+        sun.changeColor("black");
+        sun.moveHorizontal(-20);
+        sun.moveVertical(-25);
         sun.changeSize(80);
         sun.makeVisible();
+        
+        //bot body circle
+        bun = new Circle();
+        bun.changeColor("black");
+        bun.moveHorizontal(-20);
+        bun.moveVertical(85);
+        bun.changeSize(80);
+        bun.makeVisible();
+        
+        //bot butt
+        nun = new Circle();
+        nun.changeColor("black");
+        nun.moveHorizontal(30);
+        nun.moveVertical(75);
+        nun.changeSize(80);
+        nun.makeVisible();
+        
+        //top butt
+        dun = new Circle();
+        dun.changeColor("black");
+        dun.moveHorizontal(20);
+        dun.moveVertical(55);
+        dun.changeSize(80);
+        dun.makeVisible();
+        
+        foot = new Person();
+        foot.changeColor("blue");
+        foot.moveHorizontal(11);
+        foot.moveVertical(40);
+        foot.makeVisible();
     }
 
     /**
